@@ -1,0 +1,85 @@
+<!-- html_1_tag_form.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title>form</title>
+</head>
+<body>
+    <!-- <form action="../test.html" method="get"> -->
+    <form action="../test.html" method="GET">
+        <input type="text" name="id" required /> <br/>
+        <input type="text" name="temp1" value="100" disabled/> <br/>
+        <input type="text" value="200" name="temp2" readonly/> <br/>
+        <input type="password" name="pw" placeholder="비밀번호를 작성해주세요." /> <br/>
+        <label>
+            <input type="checkbox" name="accept"/>
+            개인정보 이용에 동의하시겠습니까?
+        </label>
+        <br/>
+        <hr/>
+        <input type="checkbox" name="dogs" value="jindo"/> 진돗개 
+        <input type="checkbox" name="dogs" value="poodle"/> 푸들 
+        <input type="checkbox" name="dogs" value="poong"/> 풍산개 <br/>
+        <hr/>
+        <input type="radio" name="car" value="아반떼" checked /> 아반떼
+        <input type="radio" name="car" value="K3"/> K3
+        <br/>
+        <hr/>
+        <fieldset>
+            <legend>SELECT BOX</legend>
+            <select>
+                <option>오렌지</option>
+                <option selected>사과</option>
+                <option>한라봉</option>
+            </select>
+            <select name="hobby">
+                <optgroup label="GAME">
+                    <option>LOL</option>
+                    <option>고급시계</option>
+                    <option>로스트아크</option>
+                    <option>겔러그</option>
+                </optgroup>
+                <optgroup label="study">
+                    <option>JAVA</option>
+                    <option>HTML</option>
+                    <option>경제</option>
+                </optgroup>
+            </select>
+        </fieldset>
+        <br/>
+        <hr/>
+        <input list="depList" />
+        <datalist id="depList">
+            <option value="컴퓨터공학과"></option>
+            <option value="국어국문학과"></option>
+            <option value="경영학과"></option>
+            <option value="사회체육학과"></option>
+        </datalist>
+        <br/>
+        <textarea name="content" cols="40" rows="20">12345</textarea>
+        <br/>
+        <hr/>
+
+        <input type="file" accept="image/*"/>
+        <input type="file" accept=".pdf"/>
+        <input type="file" multiple/>
+        <br/>
+        <fieldset>
+            <legend>HTML 5 특수 입력 양식</legend>
+            <input type="email" required/> <br/>
+            <input type="number" name="age"> <br/>
+            <input type="date" name="regdate"/> <br/>
+            <input type="color" name="color"/> <br/>
+            <input type="range" min="-50" max="100" value="0" name="score" />
+            <input type="search" name="search" />
+        </fieldset>
+        <br/>
+        <hr/>
+        <input type="hidden" name="a" value="b"/>
+        <input type="button" value="눌러보세요"/>
+
+        <input type="submit" value="제출"/>
+    </form>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!-- 09_bom_date_timeout.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+</head>
+<body>
+    <div id="clock"></div>
+    <button onclick="stop();">stop!</button>
+    <script>
+        // Date 객체 - 시간정보를 활용 할 수 있게 지원해주는 객체
+        // 현재 시간을 저장하고 있는 Date 객체
+        let date = new Date();
+        let year = date.getFullYear(); // 2022
+        let month = date.getMonth()+1; // 0 ~ 11월
+        // 월을 기준으로 현재 날짜를 반환
+        let day = date.getDate();
+        // 요일 반환 0 ~ 6
+        // 0 == 일요일 
+        // 1 == 월요일
+        // ...
+        // 6 == 토요일
+        let week = date.getDay();
+        let weekArray = ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'];
+
+        let hour = date.getHours();     // 시간
+        let minute = date.getMinutes(); // 분
+        let second = date.getSeconds(); // 초
+
+        let clock = document.getElementById("clock");
+        clock.innerHTML = year+"-"+month+"-"+day+"("+weekArray[week]+") "+hour+":"+minute+":"+second;
+    let timeOut;
+    function setClock(){
+        let now = new Date();
+        let hours = now.getHours();     // 시
+        let minutes = now.getMinutes(); // 분
+        let seconds = now.getSeconds(); // 초
+        let str = hours+":"+minutes+":"+seconds;
+        document.getElementById("clock").innerHTML = str;
+        timeOut = setTimeout(setClock,1000);
+    }
+    
+    setClock();
+
+    function stop(){
+        clearTimeout(timeOut);
+    }
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+/*
+	4.html 의 css 작성
+*/
+.wrap{
+	padding:0;
+	width:1100px;
+	margin:0 auto;
+	background-color:lightgray;
+}
+
+header{
+	background-color:lightsalmon;
+	overflow:hidden;
+}
+
+nav {
+	background-color: lightgreen;
+}
+
+aside, section{
+	float:left;
+	height:700px;
+	padding:1%;
+}
+
+aside{
+	background-color: skyblue;
+	width:23%;
+}
+
+section{
+	width:48%;
+	background-color: mistyrose;
+}
+
+article{
+	background-color: coral;
+	height:500px;
+}
+
+footer{
+	clear:left;
+	height:70px;
+	background-color: aquamarine;
+}
+
+h1, h2{
+	text-align:center;
+}
+
+/* 5번 header navation list 추가 flex */
+
+header nav{
+	padding:10px;
+	margin:10px;
+}
+
+header nav ul{
+	padding:0;
+	list-style:none;
+	display:flex;
+	flex-direction: row;
+}
+
+header nav ul li{
+	text-align:center;
+	border:1px solid white;
+	border-right:none;
+	background-color:gray;
+	padding:10px 0;
+	flex-grow:1;
+	flex-basis:100px;
+}
+
+header nav ul li:last-child{
+	border-right :1px solid white;
+}
+
+header nav ul li a {
+	color:white;
+	text-decoration: none;
+}
+
+header ul li:hover{
+	background-color:white;
+	cursor:pointer;
+	/* color:gray; */
+}
+
+header nav ul li:hover a{
+	color:gray;
+}
+
+/* 6번 article table */
+article{
+	padding:10px;
+}
+
+article table{
+	width:100%;
+	color:white;
+	/* border-collapse: collapse; */
+	border-spacing: 0;
+}
+
+article table tr td{
+	text-align:center;
+	height:30px;
+	border-bottom:1px solid white;
+}
+
+article table tr:nth-child(2) th{
+	border-top:1px solid white;
+	border-bottom:1px solid white;
+	height:25px;
+}
+
+table tr:first-child th{
+	border-top:1px solid white;
+	border-left:1px solid white;
+	border-right:1px solid white;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	/* border-radius: 5px 5px 0 0 ; */
+}
+
+article table tr:hover td{
+	background-color:white;
+	color:black;
+	cursor:pointer;
+}

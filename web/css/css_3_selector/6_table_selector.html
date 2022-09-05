@@ -1,0 +1,38 @@
+<!-- 6_table_selector.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title>table child selector</title>
+    <style>
+        table > tbody > tr > td{
+            color:blue;
+        }
+
+        table th{
+            color:red;
+        }
+        table td {
+            /* text-align 문자 컨텐츠 좌우 정렬
+            left / right /center */
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <!-- table>(tr>td*3)*2 -->
+    <table border="1">
+        <tr>
+            <th>좋아하는 과일</th>
+            <th>싫어하는 과일</th>
+            <th>기타</th>
+        </tr>
+        <tr>
+            <td>오렌지</td>
+            <td>포도</td>
+            <td>사과</td>
+        </tr>
+    </table>
+    
+</body>
+</html>

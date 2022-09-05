@@ -1,0 +1,36 @@
+<!-- 18_dom_event_change.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+<script>
+function changeImage(){
+    let sel = document.getElementById("sel");
+    let size = document.getElementById("size");
+    let myImg = document.getElementById("myImg");
+
+    // select tag요소에 option 들 중 선택된 option의 인덱스 번호를 반환
+    let index = sel.selectedIndex;
+    // sel.options 옵션 목록을 배열로 반환
+    myImg.src = sel.options[index].value;
+    myImg.onload = function(){
+        size.innerHTML = myImg.width +"x"+myImg.height;
+    }
+    
+
+}
+</script>
+</head>
+<body onload="changeImage();">
+<select id="sel" onchange="changeImage();">
+    <option value="../img/apple.png">사과</option>
+    <option value="../img/banana.png" selected>바나나</option>
+    <option value="../img/mango.png">망고</option>
+</select>
+<span id="size">이미지 크기</span>
+<p>
+    <img id="myImg" src="../img/apple.png" alt="과일" />
+</p>
+</body>
+</html>

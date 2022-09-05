@@ -1,0 +1,39 @@
+<!-- 06_dom_mod_attribute.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <script></script>
+</head>
+<body>
+    <img src="../img/pome.png" 
+    data-pome = "../img/pome.png" 
+    data-poodle = "../img/poddle.png" 
+    alt="pome이미지 입니다." id="image" width="120" height="100"/>
+
+    <input type="button" onclick="changeImage();" value="눌러보세요"/>
+    <input type="button" onclick="changeImg();" value="눌러보세요"/>
+<script>
+    let image = document.getElementById("image");
+    console.log(image.src);
+    console.log(image.width);
+    console.log(image.height);
+
+    function changeImage(){
+        image.src = "../img/poodle.png";
+        image.width = "300";
+        image.height = "400";
+    }
+
+function changeImg(){
+    let pome = image.getAttribute("data-pome");
+    console.log(pome);
+    let poodle = image.getAttribute("data-poodle");
+    console.log(poodle);
+    console.log(image.dataPoodle);
+    image.setAttribute("data-rice","../img/rice.png");
+}
+</script>
+</body>
+</html>

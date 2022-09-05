@@ -1,0 +1,38 @@
+<!-- 02_js_variable_2.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <script>
+        temp = '천재';
+        console.log(temp);
+        var temp = "최기근";        
+        console.log(temp);
+
+        // let
+        //console.log(temp2);
+        let temp2 = "최기근";
+        // block scope
+        {
+            var tempGlobal = "Global fields";
+            let tempLocal = "local fields";
+        }
+
+        console.log(tempGlobal);
+        // console.log(tempLocal);
+        
+        // var ES6 이전에 사용되던 변수 선언 키워드
+        // let ES6 부터 적용된 변수 선언 키워드
+        // read / write
+
+        // const (constant:상수)
+        const pi = 3.141592;
+        pi = 3.14;
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

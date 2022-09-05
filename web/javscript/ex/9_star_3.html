@@ -1,0 +1,89 @@
+<!-- 9_star_3.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <script>
+        document.write("1=================<br/>");
+        document.write("*<br/>");
+        document.write("**<br/>");
+        document.write("***<br/>");
+        document.write("****<br/>");
+        document.write("*****<br/>");
+        document.write("****<br/>");
+        document.write("***<br/>");
+        document.write("**<br/>");
+        document.write("*<br/>");
+        document.write("2=================<br/>");
+
+        let size = prompt("가로길이를 입력하세요.");
+        /*
+            size : 5
+            [1]
+            [1][2]
+            [1][2][3]
+            [1][2][3][4]
+            [1][2][3][4][5]
+            ---------------------------
+            [1][2][3][4]
+            [1][2][3]
+            [1][2]
+            [1]
+        */
+       // i = 1 ~ 5
+       for(let i = 1; i <= size; i++){
+            for(let j = 0; j < i; j++){
+                document.write("*");
+            }
+            document.write("<br/>");
+       }
+
+       for(let i = 0; i < size-1; i++){
+            for(let j = size-1; j > i; j--){
+                document.write("*");
+            }
+            document.write("<br/>");
+       
+        }
+        document.write("3=================<br/>");
+        // 전체 라인 개수 계산
+        let max = size * 2 - 1;
+        // size : 5
+        // max : 9
+        for(let i = 0; i < max; i++){
+            // i : 0 ~ 8
+            // i < 5
+            if(i < size){
+                // i : 0 ~ 4
+                for(let j = 0; j < i+1; j++){
+                    document.write("*");
+                }
+            }else{
+                // i : 5 ~ 8
+                // max : 9
+                for(let j=1; j <= max-i; j++){
+                    document.write("*");
+                }
+            }
+            document.write("<br/>");
+        }
+
+        document.write("4=================<br/>");
+        let count = 1;
+        for(let i = 1; i<=max; i++){
+            for(let j=0; j < count; j++){
+                document.write("*");
+            }
+            if(i < size){
+                count++;
+            }else{
+                count--;
+            }
+            document.write("<br/>");
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

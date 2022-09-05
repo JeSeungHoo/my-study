@@ -1,0 +1,50 @@
+<!-- 01_document.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+<script>
+    let id = document.getElementById("selectId");
+    console.log(id);
+</script>
+</head>
+<body>
+<!-- input type="text" -->
+<!-- 
+input:text.tagClass#selectId[value=$ tabindex=$]*5+input:button.tagClass#selectId[value='button'] -->
+<input type="text" id="selectId" class="tagClass" value="1" tabindex="1">
+<input type="text" id="selectId" class="tagClass" value="2" tabindex="3">
+<input type="text" id="selectId" class="tagClass" value="3" tabindex="2">
+<input type="text" id="selectId" class="tagClass" value="4" tabindex="4">
+<input type="text" id="selectId" class="tagClass" value="5" tabindex="5">
+<input type="button" value="button" class="tagClass" id="selectId">
+
+<script>
+// id 속성 값으로 요소를 검색하여 제일 먼저 검색된 한개의 요소를 가지고 옴.
+id = document.getElementById("selectId");
+console.log(id);
+
+id.value = "최기근";
+
+document.write("getElementById : "+id.value+"<br/>");
+
+// css 선택자를 이용하여 가장 먼저 검색되는 한개의 요소를 가지고 옴 - querySelector
+// type : tag이름 , class : . 도트 연산자 , id : #
+let selector = document.querySelector(".tagClass");
+document.write(`querySelector : ${selector.value} <br/>`);
+
+let tagArray=document.getElementsByTagName("input");
+for(let i=0; i < tagArray.length; i++){
+    document.write(`${i}번째 : ${tagArray[i].value} <br/>`);
+}
+// class 속성의 값이 tagClass인 모든 tag요소를 가지고옴
+let classArray = document.getElementsByClassName("tagClass");
+console.log(classArray);
+// 선택자를 이용하여 동일 선택자에 검색된 모든 tag요소를 가지고 옴
+// input[type='text']인 모든 tag 요소
+let selectorAll = document.querySelectorAll("input[type='text']");
+console.log(selectorAll);
+</script>
+</body>
+</html>

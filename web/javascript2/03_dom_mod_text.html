@@ -1,0 +1,39 @@
+<!-- 03_dom_mod_text.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+</head>
+<body>
+<div id="ex">
+    <b>여기가 div로 선언되었습니다.</b>
+</div>
+<form>
+    <input type="text" name="exName" id="exName" />
+</form>
+<a href="#" onclick="get();">div 요소 내용 출력</a>
+<br/>
+<a href="#" onclick="set();">div 요소 내용 변경</a>
+
+<script>
+function get(){
+    // alert('get() 호출');
+    let ex = document.getElementById("ex");
+    console.log(ex);
+    console.log(ex.innerHTML);
+    console.log(ex.textContent);
+}
+
+function set(){
+    //alert('set() 호출');
+    let ex = document.getElementById("ex");
+    let exName = document.getElementById("exName");
+    // <span>Hello!!!</span>
+    console.log(exName.value);
+    //ex.textContent = exName.value;
+    ex.innerHTML = exName.value;
+}
+</script>
+</body>
+</html>

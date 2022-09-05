@@ -1,0 +1,43 @@
+<!-- 11_jq_method_chaining.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <style>
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+    function Car(){
+
+        // 속성 || Field || property
+        this.speed = 0;
+
+        // method
+        this.break = function(){
+            this.break -= 10;
+            console.log('break 호출');
+            return this;
+        }
+
+        this.accel = function(){
+            this.speed += 10;
+            console.log("accel 호출");
+            return this;
+        }
+
+        this.toString = function(){
+            console.log("현재속도는 : "+this.speed+"입니다.");
+        }
+    }
+
+    let myCar = new Car();
+    myCar.accel();
+    // speed = speed + 10;
+    myCar.toString();
+    myCar.accel().accel().break().toString();
+</script>
+</head>
+<body>
+</body>
+</html>

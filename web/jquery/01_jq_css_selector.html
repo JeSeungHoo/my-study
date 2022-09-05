@@ -1,0 +1,37 @@
+<!-- 01_jq_css_selector.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <style>
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+    // jQuery == $
+// $("#header") == document.getElementById('header');
+//$(document).ready(function(){
+//$(function(){});
+$(function(){
+    $("#header").css('color','lightgreen');
+    $("#header").css('background-color','yellow');
+
+// == document.getElemtnsByClassName("header");
+    $(".header").css("color","white");
+    $(".header").css("backgroundColor","red");
+
+// == document.getElementsByTagName("h1");
+    $("h1").css("color","yellow");
+    $("h1").css("background-color","lightgreen");
+});
+    
+</script>
+</head>
+<body>
+    <!-- h1{HEADER - $}*4 -->
+    <h1 class="header">HEADER - 1</h1>
+    <h1 class="header">HEADER - 2</h1>
+    <h1 id="header" class="header">HEADER - 3</h1>
+    <h1 id="header">HEADER - 4</h1>
+</body>
+</html>

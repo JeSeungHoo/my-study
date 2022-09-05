@@ -1,0 +1,36 @@
+<!-- 02_jq_attr_prop.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <style>
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+    $(function(){
+        // 문서가 준비 완료 되었을때 실행될 함수
+        // button tag 요소들이 click 이벤트가 발생하면 
+        $("button").click(function(){
+            let value = $("#dog").attr("alt");
+            alert(value);
+        });
+
+        $("#propValue").click(function(){
+            let value = $("#dog").prop("alt");
+            alert(value);
+        });
+
+    $("#dog").click(function(){
+        // 속성 변경 or 속성 부여
+        $("#dog").attr("src","../img/pome.png");
+    });
+});
+</script>
+</head>
+<body>
+    <img src="../img/poodle.png" alt="강아지" id="dog" width="120" height="100" />
+    <button>attr 출력</button>
+    <button id="propValue">prop 출력</button>
+</body>
+</html>

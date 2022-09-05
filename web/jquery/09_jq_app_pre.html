@@ -1,0 +1,52 @@
+<!-- 09_jq_app_pre.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <style>
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+
+</script>
+</head>
+<body>
+<a href="http://koreate.net"> 한국기술교육직업전문학교</a>
+<hr/>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam reiciendis tempora modi quod ipsam nesciunt eaque exercitationem, deleniti itaque laborum, accusantium qui minus? Consequuntur, culpa totam. Saepe, rerum? Autem, sint.</p>
+<button id="pre">prepend</button>
+<button id="app">append</button>
+<button id="bef">before</button>
+<button id="aft">after</button>
+<button id="html">html</button>
+
+<script>
+    $("p").css("border","1px solid black");
+
+    $("#pre").click(function(){
+        // 해당 태그요소의 기존 콘텐츠 앞 부분에 추가
+        $("p").prepend('<b>prepend</b>');
+    });
+
+    $("#app").click(function(){
+    // 선택된 태그요소의 기존 콘텐츠 뒤 부분에 추가
+        $("p").append("<b>append</b>");
+    });
+
+    $("#bef").click(function(){
+        // before 선택된 요소 앞에 컨텐츠 추가
+        $("p").before("<b>before</b>");
+    });
+
+    $("#aft").click(function(){
+        // 선택된 태그 요소 뒤에 콘텐츠 추가
+        $("p").after("<b>after</b>");
+    });
+    $("#html").click(function(){
+        $("p").html("<h1>사요나라!</h1>");
+    });
+
+</script>
+</body>
+</html>

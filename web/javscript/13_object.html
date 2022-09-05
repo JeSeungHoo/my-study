@@ -1,0 +1,32 @@
+<!-- 13_object.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <script>
+        // JSON
+        // Javascript Object Notation
+        let product = {
+            name : "orange",
+            type : "과일",
+            price : 5000,
+            origin : "korea",
+            consume : function(name){
+                document.write(
+                    name+"님이"+this.name+"을(를) 훔쳐먹었습니다."
+                );
+            }
+        };
+console.log(typeof(product)+":"+product);
+console.log(product.name);
+console.log(product.type);
+
+product.name = "딸기";
+product.consume("박태환");
+        
+    </script>
+</head>
+<body>
+</body>
+</html>

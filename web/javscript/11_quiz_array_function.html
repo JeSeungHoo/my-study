@@ -1,0 +1,33 @@
+<!-- 11_quiz_array_function.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <script src="11_quiz_array_function.js" type="text/javascript"></script>
+    <script>
+        const STUDENT_NUM = 3;
+        let max, min, total, avg;
+
+        let englishScores = [];
+        englishScores = inputScore(englishScores,STUDENT_NUM, "ENGLISH");
+        console.log(englishScores);
+
+max = maxScore(englishScores);
+min = minScore(englishScores);
+total = totalValue(englishScores);
+avg = average(total , STUDENT_NUM);
+document.write(`english max : ${max} <br/>`);
+document.write(`english min : ${min} <br/>`);
+document.write(`english total : ${total} <br/>`);
+document.write(`english avg : ${avg} <br/>`);
+document.write("<hr/>");
+
+// 수학 점수
+let mathScores = new Array();
+        
+    </script>
+</head>
+<body>
+</body>
+</html>

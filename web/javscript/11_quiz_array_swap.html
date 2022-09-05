@@ -1,0 +1,50 @@
+<!-- 11_quiz_array_swap.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <script>
+        let a = 10, b = 20, temp = 0;
+        console.log(`a : ${a}`);
+        console.log(`b : ${b}`);
+        temp = a;
+        a = b;
+        b = temp;
+        console.log(`a : ${a}`);
+        console.log(`b : ${b}`);
+
+        let englishScores = [];
+        const STUDENT_NUM = 5;
+
+        for(let i=0; i<STUDENT_NUM; i++){
+            /*
+            let score = prompt("점수를 입력해 주세요.");
+            englishScores[i] = parseInt(score);
+            */
+            englishScores[i] = parseInt(prompt("점수를 입력해 주세요."));
+        }
+        console.log(englishScores);
+
+        temp = 0;
+for(let i=0; i < englishScores.length; i++ ){
+    for(let j = i+1; j < englishScores.length; j++){
+        // 작은 수 를 뒤로 보냄 내림차순
+        if(englishScores[i] < englishScores[j]){
+        // 큰수를 뒤로 보냄 오름차순
+        //if(englishScores[i] > englishScores[j]){
+            temp = englishScores[i];
+            englishScores[i] = englishScores[j];
+            englishScores[j] = temp;
+        }
+    }
+}
+console.log(englishScores);
+document.write(englishScores[0]);
+let max = englishScores[englishScores.length-1];
+document.write(max);
+    </script>
+</head>
+<body>
+</body>
+</html>

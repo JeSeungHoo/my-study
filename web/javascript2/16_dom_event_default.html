@@ -1,0 +1,47 @@
+<!-- 16_dom_event_default.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+<script>
+function query(){
+    // window.confirm();
+    let answer = confirm("naver로 이동하시겠습니까?");
+    return answer;
+}
+
+function noAction(e){
+    // 이벤트가 가진 기본 이벤트를 무시한다.
+    e.preventDefault();
+}
+</script>
+
+</head>
+<body>
+    <a href="https://naver.com" 
+    onclick="return query();">네이버로 이동할지 물어봄</a>
+    <hr/>
+    <!-- 전송방식 -->
+    <form name="myForm" action="https://naver.com" method="GET">
+        <input type="checkbox" name="eat" value="빵">빵<br/>
+        <input type="checkbox" name="eat" onclick="noAction(event);" value="술">술<br/>
+        <!-- onclick="noAction(event);" -->
+        <input type="submit"  value="전송" /> <br/>
+        <input type="button" id="btn" value="진짜 전송" />
+    </form>
+
+    <script>
+        document.myForm.onsubmit = function(){
+            console.log('submit 발생!');
+            return false;
+        }
+
+        let btn = document.getElementById("btn");
+        btn.onclick = function(){
+            // submit 이벤트 강제 발생
+            document.myForm.submit();
+        }
+    </script>
+</body>
+</html>

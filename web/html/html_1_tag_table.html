@@ -1,0 +1,72 @@
+<!-- html_1_tag_table.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title>table</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th></th>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+        </tr>   
+        <!-- tr>td*6      -->
+        <tr>
+            <td>오전</td>
+            <td>국어</td>
+            <td>수학</td>
+            <td>미술</td>
+            <td>체육</td>
+            <td>영어</td>
+        </tr>
+    </table>
+<table bgcolor="skyblue" border="1" cellspacing="0" cellpadding="5">
+    <tfoot>
+        <tr>
+            <!-- 
+                align 내부 컨텐츠 정렬
+                left right center
+             -->
+            <td align="center" colspan="4">&copy;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Choi</td>
+        </tr>
+    </tfoot>
+
+    <tbody>
+        <tr>
+            <td bgcolor="red">학번</td>
+            <!-- valign top middle bottom -->
+            <td valign="bottom" align="center" width="200" height="50">학생이름</td>
+            <td>전화번호</td>
+            <td rowspan="2">
+                <table border="1">
+                    <tr>
+                        <td>비고</td>
+                    </tr>
+                    <tr>
+                        <td>결석</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>10023</td>
+            <td>최기근</td>
+            <td>01094867166</td>
+        </tr>
+    </tbody>
+    <thead>
+        <tr>
+            <th colspan="4">학생정보</th>
+        </tr>
+    </thead>
+</table>
+
+</body>
+</html>
+
+

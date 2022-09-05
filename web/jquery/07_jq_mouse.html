@@ -1,0 +1,42 @@
+<!-- 07_jq_mouse.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <style>
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+    $(function(){
+        $(".out").css({
+            width : 100,
+            height:100,
+            background : "yellow"
+        }).on("click",function(){
+            $(this).css("background-color","red");
+        // 이베트 전파x
+        }).on("mouseenter",function(){
+        // 이벤트 전파 버블링
+        // }).on("mouseover",function(){
+            $(this).css("background-color","blue");
+        }).on("mouseleave",function(){
+        // }).on("mouseout",function(){
+            $(this).css("background-color","yellow");
+        });
+
+$(document).mousemove(function(event){
+    $("#log").text(event.pageX+":"+event.pageY);
+});
+
+    });
+</script>
+</head>
+<body>
+    <!-- (div.out>p{MOUSE})+div#log -->
+    <div class="out">
+        <p>MOUSE</p>
+    </div>
+    <div id="log"></div>
+</body>
+</html>

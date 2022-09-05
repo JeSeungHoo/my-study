@@ -1,0 +1,15 @@
+sts.ini
+
+-vm 삭제
+
+https://download.eclipse.org/mylyn/releases/latest
+
+에서 features만 설치
+
+update 선택 후 finish
+
+accpet 후 완료
+
+java and web : Enterprise 설치 
+
+sts3 검색 후 설치

@@ -1,0 +1,33 @@
+<!-- 00_hello_jquery.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <!-- <script src="js/jquery-3.6.0.js"></script> -->
+<!--     
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+ -->
+    <!-- jQuery를 페이지 호출 할때마다 항상 최신버전을 가지고 옴 -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script>
+        // window.onload = function(){};
+        jQuery(document).ready(function(){
+            alert("Hello jQuery! - 1");
+        });
+        // 문서가 준비되었을 때 실행
+        $(document).ready(function(){
+            alert('HELLO jQuery - 2');
+        });
+
+        let _ = $.noConflict();
+
+        _(document).ready(function(){
+            alert('Hello jQuery - 3');
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>

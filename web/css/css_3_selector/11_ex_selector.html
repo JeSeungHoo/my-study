@@ -1,0 +1,51 @@
+<!-- 11_ex_selector.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title>가상 선택자</title>
+    <style>
+        .before::before{
+            content: "before는 앞에 붙어요";
+            color:red;
+        }
+        .after::after{
+            content:"after는 뒤에 작성됩니다.";
+            color:blue;
+        }
+        .line::first-line{
+            color:red;
+        }
+
+        :root{
+            --text-content-color:skyblue;
+            --text-content-size:30px;
+        }
+
+        .line{
+            color:var(--text-content-color);
+            font-size:var(--text-content-siz,40px);
+        }
+
+        p{
+            color:var(--text-content-color);
+        }
+
+    </style>
+</head>
+<body>
+    <p class="before">
+        before 예시
+    </p>
+    <p class="after">
+        after 예시
+    </p>
+    <p class="before after">
+        before after 예시
+    </p>
+    <p class="line">
+        <!-- lorem -->
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, incidunt.<br/>Quas nam aspernatur animi et vel rem repellendus, officiis eos aliquam vitae qui magni exercitationem esse impedit, sed rerum facilis.
+    </p>
+</body>
+</html>

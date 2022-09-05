@@ -1,0 +1,39 @@
+<!-- 07_dom_event.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+</head>
+<body>
+    <input type="button" value="확인" id="btn" />
+    <input type="button" value="event 제거" id="removeEvent" />
+    <input type="button" value="Test" onclick="document.write('btn에 onclick 속성값을 추가');"/>
+
+    <script>
+        let btn = document.getElementById("btn");
+        /*
+        btn.onclick = function(){
+            alert("#btn click!!!");
+        }
+        */
+        // eventListener 등록
+        // 이벤트명은 속성값의 on 을 제외한 값
+        /*
+        btn.addEventListener("click", function (){
+            alert('btnClick!!~!!');
+        });
+        */
+        function btnEvent(){
+            document.write("eventListener click");
+        }
+
+        btn.addEventListener('click',btnEvent);
+
+document.getElementById("removeEvent").onclick = function(){
+    btn.removeEventListener('click',btnEvent);
+}
+
+    </script>
+</body>
+</html>

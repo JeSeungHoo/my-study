@@ -1,0 +1,39 @@
+<!-- 10_quiz_array.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <script>
+        let englishScores = [];
+        englishScores = new Array();
+        let max, min;
+        const STUDENT_NUM = 5;
+        /*
+        let score = prompt("저장할 영어 점수를 입력해 주세요.");
+        englishScores[0] = score;
+        score = prompt("저장할 영어 점수를 입력해 주세요.");
+        englishScores[1] = score;
+        */
+        for(let index = 0; index < STUDENT_NUM; index++){
+            let score = prompt(index+"번째 학생의 영어 점수를 입력해주세요.");
+            englishScores[index] = parseInt(score);
+        }
+        console.log(englishScores);
+        max = min = englishScores[0];
+        for(let i = 1; i<englishScores.length;i++){
+            if(englishScores[i] > max){
+                max = englishScores[i];
+            }
+            if(englishScores[i] < min){
+                min = englishScores[i];
+            }
+        }
+
+    document.write(`english max score : ${max}`);
+    document.write(`english min score : ${min}`);
+    </script>
+</head>
+<body>
+</body>
+</html>

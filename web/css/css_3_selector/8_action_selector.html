@@ -1,0 +1,69 @@
+<!-- 8_action_selector.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <style>
+        h1{
+            color:red;
+        }
+        h1:hover{
+            color:blue;
+            cursor:pointer;
+            /* 돋보기 */
+            cursor:zoom-in;   
+            cursor:zoom-out;
+            /* 마우스 포인트 ++ 모양 */
+            cursor:copy;
+        }
+
+        h1:active{
+            color:orange;
+        }
+
+        input:enabled{
+            background-color: red;
+            color:white;
+        }
+        input:disabled{
+            background-color: gray;
+            color:white;
+        }
+
+        input:read-only{
+            background-color: pink;
+            color:skyblue;
+        }
+
+        input:focus{
+            background-color: white;
+            color:black;
+            /* 외곽선 색 */
+            outline-color: aqua;
+            /* 선모양 dotted 점선 */
+            outline-style: dotted;
+            /* 선 굵기 */
+            outline-width: 1mm;
+            outline: none;
+            border: none;
+        }
+        .accept:checked{
+            width:100px;
+            height:100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>반응선택자</h1>
+    <h2>사용가능</h2>
+    <input type="text" placeholder="아이디 작성공간"/>
+    <h2>사용불가능</h2>
+    <input type="text" value="aaa" disabled />
+    <h2>읽기 전용</h2>
+    <input type="text" value="bbb" readonly />
+    <br/> <hr/>
+    <input type="checkbox" id="accept" class="accept"/>
+    <label for="accept">TEST</label>
+</body>
+</html>

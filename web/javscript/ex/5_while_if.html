@@ -1,0 +1,37 @@
+<!-- 5_while_if.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title>숫자 맞추기 게임</title>
+    <script>
+        let isRun = true;   //반복 탈출 flag
+        let guess = 78;     // 정답 
+        // Math.random() 0~ 0.9999999 까지의 랜덤한 수를 제공
+        guess = parseInt(Math.random() * 100)+1;
+        console.log(guess);
+        let reuslt = "";    // 결과 출력 문자열
+        let count = 0;      // 추측 횟수
+
+do{
+    let input = prompt("1~100까지의 정수를 입력해주세요.");
+    if(input == "" || input == null || isNaN(input)){
+        alert("1~100까지의 정수만 입력가능합니다.");
+        continue;
+    }
+    if(input == guess){
+        result = "성공입니다.";
+        isRun = false;
+    }else if(input < guess){
+        result = "낮습니다.";
+    }else{
+        result = "높습니다.";
+    }
+    count++;
+    alert(result+" 추측횟수 : "+count);
+}while(isRun);
+    </script>
+</head>
+<body>
+</body>
+</html>

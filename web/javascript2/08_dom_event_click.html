@@ -1,0 +1,84 @@
+<!-- 08_dom_event_click.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+<script>
+/*    
+function changeColor(color){
+    document.body.style.backgroundColor = color;
+}
+// browser 문서가 모두 출력되고 준비가 완료되었을 때
+window.onload = function(){
+
+    let pink = document.getElementById("pink");
+    pink.onclick = function(){
+        //document.body.style.backgroundColor = "pink";
+        //document.body.style.backgroundColor = pink.id;
+        document.body.style.backgroundColor = this.id;
+    }
+
+let orangeTag = document.querySelector("#orange");
+orangeTag.addEventListener('click',function(){
+    console.log(this);
+    document.body.style.backgroundColor = this.id;
+});
+}
+*/
+
+</script>
+</head>
+<body>
+    <!-- (label>input:radio)*4 -->
+    <label>
+        <!-- onclick="document.body.style.backgroundColor='lightblue';" -->
+        <input type="radio" name="r1" id="">
+        lightblue
+    </label>
+    <label>
+        <!-- onclick="changeColor('lightgreen');" -->
+        <input type="radio" name="r1" id="">
+        lightgreen
+    </label>
+    <label>
+        <input type="radio" name="r1" id="pink">
+        pink
+    </label>
+    <label>
+        <input type="radio" name="r1" id="orange">
+        orange
+    </label>
+
+<script>
+let radios = document.getElementsByName("r1");
+console.log(radios.length);
+let labels = document.getElementsByTagName("label");
+for(let i=0; i<radios.length; i++){
+    console.log(radios[i]);
+    console.log(labels[i].innerText);
+}
+
+for(let i in radios){
+    radios[i].onclick = function(){
+        document.body.style.backgroundColor = labels[i].innerText;
+    }
+}
+// console 청소
+console.clear();
+//             
+// [0] : [radio:lightblue]
+// [1] : [radio:lightgreen]
+// [2] : [radio:pink]
+// [3] : [radio:orange]
+for(let item of radios){
+    console.log(item);
+    item.onclick = function(){
+        let color = item.parentNode.innerText;
+        console.log(color);
+        document.body.style.backgroundColor = color;
+    }
+}
+</script>
+</body>
+</html>

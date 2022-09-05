@@ -1,0 +1,25 @@
+<!-- 07_bom_window_child.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title>child window</title>
+</head>
+<body>
+    <h1>Child Window</h1>
+    <input type="text" id="inputData"/> 
+    <hr/>
+    <input type="button" value="가져오기" id="btn">
+
+    <script>
+        let btn = document.getElementById("btn");
+        btn.onclick = function(){
+            let inputData = document.getElementById("inputData");
+            // opener - 부모 window
+            console.log(opener);
+            let sendData = opener.document.getElementById("sendData");
+            inputData.value = sendData.value;
+        }
+    </script>
+</body>
+</html>

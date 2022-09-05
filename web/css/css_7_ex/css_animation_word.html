@@ -1,0 +1,49 @@
+<!-- css_animation_word.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <style>
+        .wrap{
+            position:relative;
+            border:1px solid black;
+            width:980px;
+            height:300px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .word{
+            border:1px solid black;
+            width:80px;
+            height:20px;
+            /*
+            position:absolute;
+            left:50%;
+            top:50%;
+            
+            margin-left:-40px;
+            margin-top:-10px;
+            */
+            text-align:center;
+            animation:rotate 2s linear infinite alternate;
+        }
+
+        @keyframes rotate{
+            0%{
+                transform: rotateY(0deg);
+            }
+
+            50%{
+                transform:rotateY(180deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="word">KOREATE</div>
+    </div>
+</body>
+</html>

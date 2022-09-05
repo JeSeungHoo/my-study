@@ -1,0 +1,67 @@
+<!-- 13_dom_event_mouse.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <style>
+        span{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h3>마우스 관련 이벤트 리스너</h3>
+    <hr/>
+    <div>
+        마우스 관련
+        <span onmousedown="down(this);" 
+        onmouseup="up(this);" 
+        onmouseover="over(this);" 
+        onmouseleave="leave(this);" 
+        onwheel="wheel(event,this);">이벤트</span>가 발생합니다.
+    </div>
+
+    <script>
+        let width = 1;
+        // 테두리 두께
+
+        // wheel(event객체,event발생 태그 요소)
+        function wheel(e, obj){
+            if(e.wheelDelta < 0){
+                // 휠을 아래로 굴릴때
+                width--; // 폭 1 감소
+                if(width < 0){
+                    width = 0;
+                }
+            }else{
+                // 양수면 휠을 위로 굴릴때
+                width++; // 폭 1 증가
+            }
+
+            obj.style.borderWidth = width+"px";
+            // 테두리가 창에서 튀어나온것처럼 보임.
+            obj.style.borderStyle = "ridge";
+
+        }
+
+        // mouse가 tag 요소 위로 올라왔을때
+        function over(obj){
+            obj.style.cursor = "pointer";
+            obj.style.borderColor = "violet";
+        }
+        // mouse가 해당 요소를 벗어났을때
+        function leave(obj){
+            obj.style.borderColor = "lightgray";
+        }
+
+        function down(obj){
+            obj.style.fontStyle = "italic";
+        }
+
+        function up(obj){
+            obj.style.fontStyle = "normal";
+        }
+    </script>
+</body>
+</html>

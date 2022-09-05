@@ -1,0 +1,54 @@
+<!-- css_7_float.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <style>
+        *{
+            margin:0;
+        }
+
+        header{
+            width:100%;
+            height:100px;
+            background-color: pink;
+        }
+        aside{
+            width:15%;
+            height:400px;
+            background-color: red;
+        }
+
+        section{
+            float:left;
+            width:70%;
+            height:400px;
+            background-color: blue;
+        }
+
+        footer{
+            clear: both;
+            width:100%;
+            height:100px;
+            background-color: hotpink;
+        }
+
+        .left{
+            /* float:left; */
+            float:right;
+        }
+
+        .right{
+            float:right;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <aside class="left">left</aside>
+    <section></section>
+    <aside class="right">right</aside>
+    <footer></footer>
+</body>
+</html>

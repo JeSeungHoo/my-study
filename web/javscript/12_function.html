@@ -1,0 +1,77 @@
+<!-- 12_function.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <script>
+// 함수(function) 하나의 특별한 목적을 가진 작업을 수행하기 위해 독립적으로 설계된 코드의 집합
+// 함수 이름 : 함수를 호출하기 위해 명시된 식별자
+// 매개변수목록(parameters) : 함수 호출 시 전달되는 인자(인수)의 값을 저장할 변수들
+// 함수 블럭(바디) : 함수의 고유 기능을 수행하는 명령문의 집합
+// 반환문(return문) : 함수가 모든 작업을 수행하고 반환하는 데이터
+//      함수선언  함수이름(매개변수들,..,..){
+//        실행블럭
+//      }
+
+        // 함수 호출
+        print();
+
+    function print(){
+        console.log("print 함수 호출");
+    }
+
+    function printName(name){
+        document.write("이름은 "+name+" 입니다.");
+    }
+
+    printName("최기근");
+    printName("이나영");
+
+    function sum(x,y){
+        return x + y;
+        console.log('sum 종료');
+    }
+    let twin = sum(10,30);
+    printName(twin);
+    //nFunction();  // 함수가 정의되기 전에 호출 불가
+    // 기명 함수(named function)
+    var nFunction = function test(){
+        alert("test 호출");
+    }
+    nFunction();
+    //test(); // 접근 불가
+
+    // 익명 함수(anonymous function)
+    var anonyFunc = function (){
+        alert('익명 함수 호출');
+    }
+    
+    document.write("typeof : " + typeof(anonyFunc));
+    anonyFunc();
+    // call 함수 정의
+    function call(callBackParam){
+        for(let i=0; i<5; i++){
+            callBackParam(i);
+        }
+    }
+    // func 함수 정의
+    var func = function(i){
+        console.log("func : " + i);
+    }
+
+    // func 함수 호출
+    func(10);
+    // call 함수 호출
+    call(func);
+
+    // call 함수 호출
+    call(function(x){
+        alert(x);
+    });
+
+    </script>
+</head>
+<body>
+</body>
+</html>

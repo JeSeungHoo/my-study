@@ -1,0 +1,32 @@
+<!-- 14_dom_event_mouse_move.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+<script>
+    function mouseOver(obj){
+        obj.style.border="1px solid red";
+        obj.style.cursor = "pointer";
+        console.log("mouse over!");
+    }
+
+window.onload = function(){
+
+    document.body.onmousemove = function(event){
+        let position = "x : "+event.pageX +", y : "+event.pageY;
+        document.getElementById("pTag").innerHTML = position;
+    }
+
+}
+
+</script>
+</head>
+<body>
+    <p id="pTag"></p>
+    <!-- onmouseover="mouseOver(this);"  -->
+    <div onmouseenter="mouseOver(this);" style="background-color: yellow;width:300px;height:100px;padding:10px;">
+        <div style="width:280px;height:80px;background-color:aqua;"></div>
+    </div>
+</body>
+</html>

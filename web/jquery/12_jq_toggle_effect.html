@@ -1,0 +1,45 @@
+<!-- 12_jq_toggle_effect.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <style>
+        .page{
+            border : 1px solid black;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+
+</script>
+</head>
+<body>
+    <button>toggle</button>
+    <hr/>
+    <div class="page">
+        <h1>lorem ipsum</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus similique, numquam reprehenderit nobis a ad laudantium ducimus adipisci! Tempora ea tenetur a nisi fugiat delectus doloribus quam quo illum esse.</p>
+    </div>
+    <div>dummy</div>
+    <script>
+        $(".page").hover(function(){
+            // 400     500     600
+            //'fast','normal','slow' 
+            // $(this).stop().hide(500);
+            // $(this).stop().slideUp('slow');
+            $(this).stop().fadeOut("fast");
+        },function(){
+            // $(this).stop().show("normal");
+            // $(this).stop().slideDown("slow");
+            $(this).stop().fadeIn("fast");
+        });
+
+        $("button").click(function(){
+        //$(".page").stop().slideToggle("slow");
+        //    $(".page").stop().toggle("slow");
+            $(".page").stop().fadeToggle("slow");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!-- 10_dom_node_append.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+</head>
+<body>
+<!-- input:text#text -->
+<input type="text" id="text" />
+<div id="addElement" style="font:20px bold;">요소 추가 클릭!</div>
+<div id="addTextNode" style="font:20px bold;">텍스트 요소 추가!</div>
+<div id="target">target</div>
+<script>
+    // h1 tag 요소를 생성해서 반환
+    let h1 = document.createElement('h1');
+    // <h1></h1>
+    h1.innerHTML = "추가된 요소";
+    h1.style.color = "red";
+    console.log(h1);
+
+let addElement = document.getElementById("addElement");
+let target = document.getElementById("target");
+addElement.onclick = function(){
+    // 기존 content 뒤에 요소 추가
+    // target.append(h1);
+    // 기존 content 앞에 요소 추가
+    target.prepend(h1);
+}
+
+let addTextNode = document.getElementById("addTextNode");
+addTextNode.onclick = function(){
+    let node = document.getElementById("text").value;
+    console.log(node);
+    // text 정보가 저장된 객체 생성
+    let textNode = document.createTextNode(node);
+    console.log(textNode);
+    target.appendChild(textNode);
+    //target.appendChild("Hello");
+    target.append("<h1>append로 추가된 텍스트</h1>");
+
+}
+</script>
+</body>
+</html>

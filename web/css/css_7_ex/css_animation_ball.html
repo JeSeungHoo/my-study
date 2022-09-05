@@ -1,0 +1,37 @@
+<!-- css_animation_ball.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <style>
+        #ball{
+            position:absolute;
+            width:20px;
+            height:20px;
+            background-color:red;
+            border-radius:10px;
+            animation-name: bounce;
+            animation-iteration-count: infinite;
+            animation-duration: 2s;
+        }
+
+        @keyframes bounce{
+            from, to{
+                bottom:0px;
+                /* 천천히 끝 */
+                animation-timing-function: ease-out;
+            }
+
+            50%{
+                bottom:200px;
+                /* 천천히 시작 */
+                animation-timing-function: ease-in;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="ball"></div>
+</body>
+</html>

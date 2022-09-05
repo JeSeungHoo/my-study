@@ -1,0 +1,40 @@
+<!-- 5_child_selector.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <style>
+        .header #nav h1{
+            background-color:blue;
+        }
+
+        .header h1{
+            background-color:skyblue;
+            color:red;
+        }
+
+        .header > h1{
+            background-color: pink;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <!-- div.header -->
+    <!-- div#header -->
+    <div class="header">
+        <h1>lorem ipsum</h1>
+        <div id="nav">
+            <h1>Navigation</h1>
+        </div>
+    </div>
+    <!-- div#dummy -->
+    <div id="dummy">
+        <h1>DUMMY</h1>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!-- css_3_display.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <style>
+        h1{
+            background-color:skyblue;
+            margin-bottom:30px;
+            width:200px;
+            height:200px;
+            display:block;
+            display:inline;
+            display:inline-block;
+        }
+
+        h1.none{
+            display:none;
+        }
+
+        h1.hidden{
+            /* visible | hidden */
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <!-- h1{BLOCK 요소 $}*5 -->
+    <h1>BLOCK 요소 1</h1>
+    <h1>BLOCK 요소 2</h1>
+    <h1 class="none">BLOCK 요소 3</h1>
+    <h1 class="hidden">BLOCK 요소 4</h1>
+    <h1>BLOCK 요소 5</h1>
+</body>
+</html>

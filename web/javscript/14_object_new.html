@@ -1,0 +1,34 @@
+<!-- 14_object_new.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <script>
+        // 차를 만들기 위한 설계
+        function Car(model, speed, color){
+            this.model = model;
+            this.speed = speed;
+            this.color = color;
+
+            this.accel = function(){
+                this.speed += 10;
+            }
+
+            this.break = function(){
+                this.speed -= 10;
+            }
+        }
+
+        let choiCar = new Car("GV80",0,"white");
+        let jinCar = new Car("Benz",0,"BLACK");
+
+        console.log(choiCar.model);
+        console.log(jinCar.model);
+        jinCar.model = "MORNING";
+        console.log(jinCar.model);
+    </script>
+</head>
+<body>
+</body>
+</html>

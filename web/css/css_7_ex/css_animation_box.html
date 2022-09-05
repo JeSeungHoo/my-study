@@ -1,0 +1,45 @@
+<!-- css_animation_box.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <style>
+        div{
+            width:100px;
+            height:100px;
+            background: red;
+            position:relative;
+            animation: 2s myAnim;
+            animation-iteration-count: infinite;
+            /* ease : 기본값 천천히 시작 빨라졌다가 마지막에 다시 느려짐 */
+            animation-timing-function: ease;
+            animation-direction: normal;
+        }
+
+        @keyframes myAnim{
+            0%{
+                left:0px;
+            }
+
+            25%{
+                left:100px;
+            }
+
+            50%{
+                left:200px;
+            }
+
+            75%{
+                left:100px;
+            }
+            100%{
+                left:0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

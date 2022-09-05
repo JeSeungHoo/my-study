@@ -1,0 +1,37 @@
+<!-- 04_dom_mod_content.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+</head>
+<body>
+    <div id="content">
+        <span style="color:red">    red   </span>
+    </div>
+    <input type="text" id="text" />
+    <button id="html" onclick="getHTML();" >innerHTML</button>
+    <button id="innerText" onclick="getText();" >innerText</button>
+    <button id="textContent" onclick="tc()" >textContent</button>
+
+<script>
+function getHTML(){
+let content = document.getElementById("content");
+// <div id="content">dummy</div>
+let val = content.innerHTML;
+console.log(`val : ${val}`);
+}
+
+function getText(){
+let val = 
+document.querySelector("#content").innerText;
+console.log(`innerText : ${val}`);
+}
+
+function tc(){
+let val = document.getElementById("content").textContent;
+console.log(`textContent : ${val}`);
+}
+</script>
+</body>
+</html>

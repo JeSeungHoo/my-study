@@ -1,0 +1,47 @@
+<!-- 4_casecade_selector.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <style>
+        h1{
+            color:red;
+        }
+
+        *{
+            color:greenyellow;
+        }
+
+        /*
+             id    ==     #
+             class ==    .
+        */
+        #bg{
+            background-color:skyblue;
+        }
+
+        #color{
+            color:blue;
+        }
+        .size{
+            /* 글자 크기 px로 지정 */
+            font-size:50px;
+        }
+        .color{
+            color:pink;
+        }
+        h2{
+            background-color:aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>TYPE 선택자</h1>
+    <!-- h2{선택자 적용}*4 -->
+    <h2 id="bg">선택자 적용</h2>
+    <h2 id="color">선택자 적용</h2>
+    <h2 id="color bg">선택자 적용</h2>
+    <h2 style="color:black;" id="color" class="size color">선택자 적용</h2>
+</body>
+</html>

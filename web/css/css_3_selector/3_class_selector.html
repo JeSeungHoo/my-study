@@ -1,0 +1,32 @@
+<!-- 3_class_selector.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title>class selector</title>
+    <style>
+        *{
+            color:blue;
+        }
+
+        /* class 속성 값이 일치하는 요소 keyword 
+         .classValue 
+        */
+        .select{
+            color:red;
+        }
+        .size{
+            /* 글자 컨텐츠의 크기 조정 */
+            font-size:1.5em;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>사과</li>
+        <li class="size">바나나</li>
+        <li class="select">오렌지</li>
+        <li class="size select">밀감</li>
+    </ul>
+</body>
+</html>

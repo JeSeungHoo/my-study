@@ -1,0 +1,25 @@
+<!-- 06_bom_window_open.html -->
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <script>
+        let child;
+        function 새창열기(){
+            // _self 현재창에
+            // _blank 새창에
+            child = window.open('./03_bom_location.html','_blank','width=300,height=300,top=100,left=100,resizable=no,scrollbars=no,titlebar=yes,locations=no');
+        }
+
+        function windowClose(){
+            // 해당 window를 종료
+            child.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" onclick="새창열기();" value="새창 열기" />
+    <input type="button" onclick="windowClose();" value="창 닫기">
+</body>
+</html>
